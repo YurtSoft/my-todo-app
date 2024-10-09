@@ -25,8 +25,8 @@ class TasksTest < ApplicationSystemTestCase
   end
 
   test "should update Task" do
-    visit task_url(@task)
-    click_on "Edit this task", match: :first
+    visit tasks_url(@task)
+    click_on "Edit", match: :first
 
     check "Completed" if @task.completed
     fill_in "Description", with: @task.description
@@ -39,8 +39,11 @@ class TasksTest < ApplicationSystemTestCase
   end
 
   test "should destroy Task" do
-    visit task_url(@task)
-    click_on "Destroy this task", match: :first
+    visit tasks_url(@task)
+
+    accept_confirm "Are you sure?" do
+      click_on "Delete", match: :first
+    end
 
     assert_text "Task was successfully destroyed"
   end
