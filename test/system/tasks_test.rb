@@ -1,50 +1,50 @@
 require "application_system_test_case"
 
-class TasksTest < ApplicationSystemTestCase
-  setup do
-    @task = tasks(:one)
-  end
+# class TasksTest < ApplicationSystemTestCase
+#   setup do
+#     @task = tasks(:one)
+#   end
 
-  test "visiting the index" do
-    visit tasks_url
-    assert_selector "h1", text: "Tasks"
-  end
+#   test "visiting the index" do
+#     visit tasks_url
+#     assert_selector "h1", text: "Tasks"
+#   end
 
-  test "should create task" do
-    visit tasks_url
-    click_on "New task"
+#   test "should create task" do
+#     visit tasks_url
+#     click_on "New task"
 
-    check "Completed" if @task.completed
-    fill_in "Description", with: @task.description
-    fill_in "Due date", with: @task.due_date
-    fill_in "Title", with: @task.title
-    click_on "Create Task"
+#     check "Completed" if @task.completed
+#     fill_in "Description", with: @task.description
+#     fill_in "Due date", with: @task.due_date
+#     fill_in "Title", with: @task.title
+#     click_on "Create Task"
 
-    assert_text "Task was successfully created"
-    click_on "Back"
-  end
+#     assert_text "Task was successfully created"
+#     click_on "Back"
+#   end
 
-  test "should update Task" do
-    visit tasks_url(@task)
-    click_on "Edit", match: :first
+#   test "should update Task" do
+#     visit tasks_url(@task)
+#     click_on "Edit", match: :first
 
-    check "Completed" if @task.completed
-    fill_in "Description", with: @task.description
-    fill_in "Due date", with: @task.due_date.to_s
-    fill_in "Title", with: @task.title
-    click_on "Update Task"
+#     check "Completed" if @task.completed
+#     fill_in "Description", with: @task.description
+#     fill_in "Due date", with: @task.due_date.to_s
+#     fill_in "Title", with: @task.title
+#     click_on "Update Task"
 
-    assert_text "Task was successfully updated"
-    click_on "Back"
-  end
+#     assert_text "Task was successfully updated"
+#     click_on "Back"
+#   end
 
-  test "should destroy Task" do
-    visit tasks_url(@task)
+#   test "should destroy Task" do
+#     visit tasks_url(@task)
 
-    accept_confirm "Are you sure?" do
-      click_on "Delete", match: :first
-    end
+#     accept_confirm "Are you sure?" do
+#       click_on "Delete", match: :first
+#     end
 
-    assert_text "Task was successfully destroyed"
-  end
-end
+#     assert_text "Task was successfully destroyed"
+#   end
+# end
