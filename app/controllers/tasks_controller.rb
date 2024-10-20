@@ -6,6 +6,10 @@ class TasksController < ApplicationController
     @tasks = Task.all
   end
 
+  def index_lazy
+    @tasks = Task.all
+  end
+
   # GET /tasks/1 or /tasks/1.json
   def show
   end

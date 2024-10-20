@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "tasks/index_lazy", to: "tasks#index_lazy"
+
   resource :session
   resources :passwords, param: :token
   resources :tasks
