@@ -17,8 +17,7 @@ servers:
 # Set ssl: false if using something like Cloudflare to terminate SSL (but keep host!).
 proxy:
   ssl: true
-  host: app.example.com
-  app_port: 3000
+  host: app.yurtsoft.org
 
 # Credentials for your image host.
 registry:
