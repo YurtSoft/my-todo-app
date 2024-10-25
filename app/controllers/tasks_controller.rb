@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 
   # GET /tasks or /tasks.json
   def index
-    @tasks = Task.all
+    @tasks = Current.user.tasks
   end
 
   # GET /tasks/1 or /tasks/1.json
@@ -12,7 +12,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
-    @task = Task.new
+    @task = Current.user.tasks.build
   end
 
   # GET /tasks/1/edit
@@ -21,7 +21,7 @@ class TasksController < ApplicationController
 
   # POST /tasks or /tasks.json
   def create
-    @task = Task.new(task_params)
+    @task = Current.user.tasks.build(task_params)
 
     respond_to do |format|
       if @task.save
