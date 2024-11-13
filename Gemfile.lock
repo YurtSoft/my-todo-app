@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: f5805086d8c7fe1ccce7218f85b1c254305379b7
+  revision: 5b50d30e52406a8d2f0f257531487e85d1ba7406
   branch: main
   specs:
     actioncable (8.1.0.alpha)
@@ -281,7 +281,7 @@ GEM
       rubocop-rails
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
-    securerandom (0.3.1)
+    securerandom (0.3.2)
     selenium-webdriver (4.26.0)
       base64 (~> 0.2)
       logger (~> 1.4)
