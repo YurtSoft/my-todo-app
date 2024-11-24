@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2024_10_25_135807) do
+ActiveRecord::Schema[8.1].define(version: 2024_11_24_113150) do
   create_table "sessions", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "ip_address"
@@ -24,7 +24,7 @@ ActiveRecord::Schema[8.1].define(version: 2024_10_25_135807) do
     t.string "title"
     t.text "description"
     t.boolean "completed"
-    t.datetime "due_date"
+    t.datetime "due_date", default: "2024-11-24 11:33:12"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id", null: false
