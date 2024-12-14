@@ -12,7 +12,7 @@
       <tbody class="text-gray-600 text-sm font-light">
         <% @tasks.each do |task| %>
           <tr class="border-b border-gray-300 hover:bg-gray-100">
-            <td class="py-3 px-6 text-left"><%= link_to task.title, task_path(task) %></td>
+            <td class="py-3 px-6 text-left"><%= task.title %></td>
             <td class="py-3 px-6 text-left">
               <% if task.completed %>
                 <span class="bg-green-200 text-green-700 py-1 px-3 rounded-full text-xs">Completed</span>
